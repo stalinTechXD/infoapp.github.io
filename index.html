@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE-5TH-SEM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/631054744f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><span class="imp">CSE-5TH-SEM</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link " href="#">Time Table <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link " href="#">Syllabus Generator<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link " href="#">Books Download<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link " href="#">About us<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Time table image -->
+    <div class="time_table">
+        <img src="assets/images/tt2.jpeg" alt="">
+    </div>
+    <!-- buttons and images -->
+    <div class="syllabus_generator">
+        <div class="button-group">
+            <button class="button link" onclick="display(1)">Computer Networks</button>
+            <button class="button link" onclick="display(2)">Artificial Intelligence</button>
+            <button class="button link" onclick="display(3)">DataBase Mgmt systems</button>
+            <button class="button link" onclick="display(4)">Computer Graphics</button>
+            <button class="button link" onclick="display(5)">Operations Research</button>
+            <button class="button link" onclick="display(6)">Python Programming</button>
+            <button class="button link" onclick="display(7)">DBMS Lab</button>
+            <button class="button link" onclick="display(8)">CG Lab</button>
+
+        </div>
+        <div class="img-container">
+            <img class="img" src="assets/images/gen.jpeg" alt="" class="img" id="img-1">
+            <img class="img" src="" style="display: none;" alt="" id="img-2">
+            <img class="img" src="" alt="" id="img-3" style="display: none;">
+            <img class="img" src="" alt="" id="img-4" style="display: none;">
+        </div>
+    </div>
+    <!-- books links -->
+    <div class="downloads">
+        <h2>Some Useful links</h2>
+        <a class="button link">
+            this is the sample button
+        </a>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+
+        <a href="https://github.com/rayansailani" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</body>
+<script>
+    function display(num) {
+        let pic1 = "";
+        let pic2 = "";
+        let pic3 = "";
+        let pic4 = "";
+        let p1 = document.getElementById("img-1");
+        let p2 = document.getElementById("img-2");
+        let p3 = document.getElementById("img-3");
+        let p4 = document.getElementById("img-4");
+
+        switch (num) {
+            case 1:
+                pic1 = "assets/images/cn1.jpeg";
+                pic2 = "assets/images/cn2.jpeg";
+                pic3 = "";
+                pic4 = "";
+                break;
+            case 2:
+                pic1 = "assets/images/ai1.jpeg";
+                pic2 = "assets/images/ai2.jpeg";
+                pic3 = "assets/images/ai3.jpeg";
+                pic4 = "";
+                break;
+            case 3:
+                pic1 = "assets/images/dbms1.jpeg";
+                pic2 = "assets/images/dbms2.jpeg";
+                pic3 = "assets/images/dbms3.jpeg";
+                pic4 = "";
+                break;
+            case 4:
+                pic1 = "assets/images/cg1.jpeg";
+                pic2 = "assets/images/cg2.jpeg";
+                pic3 = "assets/images/cg3.jpeg";
+                pic4 = "";
+                break;
+            case 5:
+                pic1 = "assets/images/or1.jpeg";
+                pic2 = "assets/images/or2.jpeg";
+                pic3 = "";
+                pic4 = "";
+                break;
+            case 6:
+                pic1 = "assets/images/pp1.jpeg";
+                pic2 = "assets/images/pp2.jpeg";
+                pic3 = "assets/images/pp3.jpeg";
+                pic4 = "";
+                break;
+            case 7:
+                pic1 = "assets/images/dbmslab1.jpeg";
+                pic2 = "assets/images/dbmslab2.jpeg";
+                pic3 = "assets/images/dbmslab3.jpeg";
+                pic4 = "assets/images/dbmslab4.jpeg";
+                break;
+            case 8:
+                pic1 = "assets/images/cglab1.jpeg";
+                pic2 = "assets/images/cglab2.jpeg";
+                pic3 = "";
+                pic4 = "";
+                break;
+        }
+        p1.src = pic1;
+        if (pic2 !== "") {
+            p2.src = pic2;
+        }
+        else {
+            p2.style.display = "none;"
+        }
+        if (pic3 !== "") {
+            p3.style.display = "block";
+            p3.src = pic3;
+        }
+        else {
+            p3.style.display = "none";
+            p3.style.boxShadow = "none";
+        }
+        if (pic4 !== "") {
+            p4.style.display = "block";
+            p4.src = pic4;
+        }
+        else {
+            p4.style.display = "none";
+            p3.style.boxShadow = "none";
+        }
+    }
+</script>
+
+</html>
