@@ -3,6 +3,7 @@
 *::after {
     box-sizing: border-box;
 }
+
 :root{
 
     --clr-light: #fff;
@@ -22,12 +23,13 @@ html{
 }
 body{
     margin:0;
-
+    overflow-x: hidden;
     background: #f2f2f2;
 }
 .imp{
     color:var(--clr-accent);
     text-align: center;
+    font-weight: bold;
 }
 :focus {
     outline: 3px solid var(--clr-accent);
@@ -69,7 +71,9 @@ img{
     box-shadow: var(--bs);
 }
 @media screen and (max-width: 1000px){
-    img{max-width:100%;}
+    img{max-width:100%;
+    box-shadow: var(--bs);
+    }
 }
 /* Books links */
 .container{

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSE-5TH-SEM</title>
+    <title>CSE/ISE-5TH-SEM</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -25,7 +25,7 @@
 <body>
     <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><span class="imp">CSE-5TH-SEM</span></a>
+        <a class="navbar-brand" href="#"><span class="imp">CSE/ISE-5TH-SEM</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -54,34 +54,29 @@
         <img src="assets/images/tt2.jpeg" alt="">
     </div>
     <!-- buttons and images -->
-    <div class="syllabus_generator">
+    <div class="syllabus_generator" id="syll">
         <div class="button-group">
             <button class="button link" onclick="display(1)">Computer Networks</button>
             <button class="button link" onclick="display(2)">Artificial Intelligence</button>
             <button class="button link" onclick="display(3)">DataBase Mgmt systems</button>
             <button class="button link" onclick="display(4)">Computer Graphics</button>
             <button class="button link" onclick="display(5)">Operations Research</button>
+            <button class="button link" onclick="display(9)">Probability</button>
             <button class="button link" onclick="display(6)">Python Programming</button>
             <button class="button link" onclick="display(7)">DBMS Lab</button>
             <button class="button link" onclick="display(8)">CG Lab</button>
 
+
         </div>
-        <div class="img-container" id="syll">
+        <div class="img-container">
             <img class="img" src="assets/images/gen.jpeg" alt="" class="img" id="img-1">
             <img class="img" src="" style="display: none;" alt="" id="img-2">
             <img class="img" src="" alt="" id="img-3" style="display: none;">
             <img class="img" src="" alt="" id="img-4" style="display: none;">
         </div>
     </div>
-    <!-- books links -->
-    <!-- <div class="downloads">
-        <h2>Some Useful links</h2>
-        <a class="button link">
-            this is the sample button
-        </a>
-    </div> -->
     <h3 id="books">Books Download</h3>
-    <div class="container">
+    <div class="container" id="books">
 
         <div class="dropdown" id="books">
             <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -104,12 +99,14 @@
                 <a target="_blank" class="dropdown-item"
                     href="assets/books/Introduction_to_Computing_Using_Python_A.pdf">Python
                     Programming</a>
+                <a target="_blank" class="dropdown-item"
+                    href="assets/books/Probability_and_Statistics_with_Reliabil.pdf">Probability</a>
 
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="dropdown" id="books">
+        <div class="dropdown">
             <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Additional Resources
@@ -179,7 +176,7 @@
             case 5:
                 pic1 = "assets/images/or1.jpeg";
                 pic2 = "assets/images/or2.jpeg";
-                pic3 = "";
+                pic3 = "assets/images/or3.jpeg";
                 pic4 = "";
                 break;
             case 6:
@@ -200,6 +197,12 @@
                 pic3 = "";
                 pic4 = "";
                 break;
+            case 9:
+                pic1 = "assets/images/psp1.jpeg";
+                pic2 = "assets/images/psp2.jpeg";
+                pic3 = "assets/images/psp3.jpeg";
+                pic4 = "";
+                break;
         }
         p1.src = pic1;
         if (pic2 !== "") {
@@ -215,7 +218,7 @@
         }
         else {
             p3.style.display = "none";
-            p3.style.boxShadow = "none";
+
         }
         if (pic4 !== "") {
             p4.style.display = "block";
@@ -223,7 +226,7 @@
         }
         else {
             p4.style.display = "none";
-            p3.style.boxShadow = "none";
+
         }
     }
 </script>
