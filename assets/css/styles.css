@@ -29,6 +29,10 @@ body{
     color:var(--clr-accent);
     text-align: center;
 }
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
 /* buttons and links styling  */
 .button-group{
     display:flex;
@@ -48,6 +52,10 @@ body{
     border-radius: 4px;
 
 }
+.button:focus, .btn-success{
+    border:none;
+    outline: none;
+}
 .button:hover, .link:hover{
     opacity:0.7;
 }
@@ -55,15 +63,28 @@ body{
 img{
     padding:12px 12px;
     display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 50%;
-  box-shadow: var(--bs);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    box-shadow: var(--bs);
 }
 @media screen and (max-width: 1000px){
     img{max-width:100%;}
 }
-
+/* Books links */
+.container{
+    margin:20px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.btn-success {
+     background-color: var(--clr-accent); 
+     color:black;
+    }
 /* footer */
 .footer{margin-top:12px;
     display:flex;
@@ -72,4 +93,8 @@ img{
     justify-content: center;
     padding:12px;
     background: var(--clr-accent);
+}
+h3{
+    margin:12px;
+    text-align: center;
 }
