@@ -43,8 +43,12 @@
                     <a class="nav-link " href="#books">Books Download<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
+                    <a class="nav-link " href="#gpa">SGPA Calculator<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link " href="#about">Credit<span class="sr-only">(current)</span></a>
                 </li>
+
             </ul>
 
         </div>
@@ -136,6 +140,125 @@
             </div>
         </div>
     </div>
+    <h1 class="heading" id="gpa">SGPA Calculator</h1>
+    <div class="content">
+
+        <p class="grade">
+            GRADE :
+            <span class="output">0</span>
+        </p>
+        <p> Computer Network
+            <select id="select1" class="select">
+                <option value="10">s</option>
+                <option value="9">a</option>
+                <option value="8">b</option>
+                <option value="7">c</option>
+                <option value="6">d</option>
+                <option value="5">e</option>
+                <option value="4">f</option>
+            </select>
+        </p>
+
+
+
+
+
+        <p> Data Base Mgmt
+            <select id="select2" class="select">
+                <option value="10">s</option>
+                <option value="9">a</option>
+                <option value="8">b</option>
+                <option value="7">c</option>
+                <option value="6">d</option>
+                <option value="5">e</option>
+                <option value="4">f</option>
+            </select>
+        </p>
+
+
+        <p> Artificial Intellegence
+            <select id="select3" class="select">
+                <option value="10">s</option>
+                <option value="9">a</option>
+                <option value="8">b</option>
+                <option value="7">c</option>
+                <option value="6">d</option>
+                <option value="5">e</option>
+                <option value="4">f</option>
+        </p>
+        </select>
+
+        <p> Python Programming
+            <select id="select4" class="select">
+                <option value="10">s</option>
+                <option value="9">a</option>
+                <option value="8">b</option>
+                <option value="7">c</option>
+                <option value="6">d</option>
+                <option value="5">e</option>
+                <option value="4">f</option>
+            </select>
+        </p>
+
+
+        <p> Computer Graphics
+            <select id="select5" class="select">
+                <option value="10">s</option>
+                <option value="9">a</option>
+                <option value="8">b</option>
+                <option value="7">c</option>
+                <option value="6">d</option>
+                <option value="5">e</option>
+                <option value="4">f</option>
+            </select>
+        </p>
+
+
+        <p> Opertiaonal Research
+            <select id="select6" class="select">
+                <option value="10">s</option>
+                <option value="9">a</option>
+                <option value="8">b</option>
+                <option value="7">c</option>
+                <option value="6">d</option>
+                <option value="5">e</option>
+                <option value="4">f</option>
+            </select>
+        </p>
+
+
+        <p> CG-Lab
+            <select id="select7" class="select">
+                <option value="10">s</option>
+                <option value="9">a</option>
+                <option value="8">b</option>
+                <option value="7">c</option>
+                <option value="6">d</option>
+                <option value="5">e</option>
+                <option value="4">f</option>
+            </select>
+        </p>
+
+
+        <p> DBMS-LAB
+            <select id="select8" class="select">
+                <option value="10">s</option>
+                <option value="9">a</option>
+                <option value="8">b</option>
+                <option value="7">c</option>
+                <option value="6">d</option>
+                <option value="5">e</option>
+                <option value="4">f</option>
+            </select>
+        </p>
+
+
+
+
+        <button class="button" onclick="getOption()"> Check </button>
+
+    </div>
+
     <!-- footer -->
     <div class="footer" id="about">
 
@@ -251,6 +374,32 @@
 
         }
     }
+
+    function getOption() {
+        selectElement1 = document.querySelector('#select1');
+        selectElement2 = document.querySelector('#select2');
+        selectElement3 = document.querySelector('#select3');
+        selectElement4 = document.querySelector('#select4');
+        selectElement5 = document.querySelector('#select5');
+        selectElement6 = document.querySelector('#select6');
+        selectElement7 = document.querySelector('#select7');
+        selectElement8 = document.querySelector('#select8');
+
+        output1 = selectElement1.value;
+        output2 = selectElement2.value;
+        output3 = selectElement3.value;
+        output4 = selectElement4.value;
+        output5 = selectElement5.value;
+        output6 = selectElement6.value;
+        output7 = selectElement7.value;
+        output8 = selectElement8.value;
+        out = ((parseInt(output1) + parseInt(output2) + parseInt(output3) + parseInt(output4) + parseInt(output5) + parseInt(output6) + parseInt(output7) + parseInt(output8)) / 8);
+
+
+        document.querySelector('.output').textContent
+            = out;
+    }
+
 </script>
 
 </html>

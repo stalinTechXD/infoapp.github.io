@@ -54,6 +54,11 @@ body{
     border-radius: 4px;
 
 }
+@media screen and (max-width:800px){
+    .button, .link{
+        width:100%;
+    }
+}
 .button:focus, .btn-success{
     border:none;
     outline: none;
@@ -101,4 +106,31 @@ img{
 h3{
     margin:12px;
     text-align: center;
+}
+/* CGPA generator */
+.heading{
+    text-align:center;
+}
+.content{
+    margin-top:20px;
+    padding: 6px;
+    font-size: 1.2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.select{
+    width:50px;
+}
+.grade{
+    background: var(--clr-accent);
+    padding:6px;
+    border-radius:4px;
+}
+.output{
+    background:white;
+    padding:2px;
+    margin:2px;
+    border-radius: 2px;
 }
